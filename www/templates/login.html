@@ -1,0 +1,30 @@
+<ion-view title="Login">
+    <ion-content>
+        <div class="divlogo" style="margin: 25px 0 35px 0;padding-left: 25px;">
+            <img class="full-image" src="img/logo.png">
+        </div>
+        <div id="formLogin">
+            <ion-list>
+                <label class="item item-input">
+               <i class="icon ion-person placeholder-icon"></i>
+              <input type="text" placeholder="Usuário">
+            </label>
+                <label class="item item-input">
+               <i class="icon ion-locked placeholder-icon"></i>
+              <input type="password" placeholder="Senha">
+            </label>
+            </ion-list>
+        </div>
+        <div id="divBtns" class="row">
+            <div id="lembrar-me" class=" row col-50">
+                <ion-checkbox class="checkbox-balanced semBorda">Lembrar-me</ion-checkbox>
+            </div>
+            <div class="row col-50">
+                <button ng-click="goHome($index); Vibrar()" class="button button-full button-balanced icon-right ion-chevron-right">Entrar</button>
+            </div>
+        </div>
+        <div "esqueceuSenha" class="center">
+            <h5>Esqueceu sua senha?</h3>
+        </div>
+    </ion-content>
+</ion-view>

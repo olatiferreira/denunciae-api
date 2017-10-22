@@ -1,0 +1,32 @@
+<ion-view>
+    <ion-content>
+        <!--<div class="bar bar-header">
+            <button class="button button-icon icon ion-navicon"></button>
+            <div class="h1 title"></div>
+            <button ng-click="goCad()" class="button button-clear icon ion-more  button-dark"></button>
+        </div>
+        <br>
+        <br>-->
+        <!--Aqui-->
+        <div class="row row-center" data-ng-init="consulta()">
+            <div id="divAvatar" class="col col-center text-center">
+                <a class="item item-thumbnail-center semBorda">
+                    <img src="img/gatuno.jpg">
+                    <p>Olá, Luciano!</p>
+                </a>
+            </div>
+        </div>
+        <div class="button-bar item">
+            <a class="button button-icon icon ion-home" ></a>
+            <a class="button button-icon icon ion-heart"></a>
+        </div>
+        <div class="semBorda" ng-repeat="estabelecimento in vm.estabelecimentos">
+            <div class="item item-thumbnail-left item-icon-right" ng-click="goEstabelecimento()">
+                <img src="\img\tony-logo.png">
+                <h3 class="titleList">{{estabelecimento.nome}}</h3>
+                <p class="line-break">{{estabelecimento.categoria}}</p>
+                <a class="button button-icon icon ion-chevron-right" ng-click="goEstabelecimento()"></a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

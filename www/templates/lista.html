@@ -1,0 +1,19 @@
+ <ion-pane>
+      <ion-header-bar class="bar-stable">
+      <button class="button button-icon icon ion-ios-minus-outline" ng-click="showDelete = !showDelete"></button>
+        <h1 class="title">Ionic Blank Starter</h1>
+      </ion-header-bar>
+      <ion-content>
+        <ion-refresher
+          pulling-text="Pull to refresh..."
+          on-refresh="doRefresh()">
+          <!-- Aqui !-->
+        </ion-refresher>
+         <ion-list show-delete="showDelete">
+          <ion-item ng-repeat="item in items" class="item-button-right">
+            <p>Item {{item.id}} </p>
+          <ion-option-button class="button-assertive" ng-click="deleteItem(item)">Deletar</ion-delete-button>
+         </ion-item>
+         </ion-list>
+      </ion-content>
+    </ion-pane>

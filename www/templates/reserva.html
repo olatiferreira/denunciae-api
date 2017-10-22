@@ -1,0 +1,77 @@
+<ion-view>
+    <ion-content>
+        <div id="divImgEstabelecimento" class="item semBorda">
+            <img class="full-image semBorda" src="img\foto-full.jpg">
+        </div>
+        <div id="divDetalhesEstabelecimento" class="row ">
+            <!--<div id="divAvatar" class="row col-25 row-left">-->
+            <div class="item item-thumbnail-left item-icon-right row col-25 row-left semBorda">
+                < <img src="\img\tony-logo.png" class="imagem-redonda">
+            </div>
+            <div class="row col row-center text-center" ng-repeat="estabelecimento in vm.estabelecimentosEsp">
+                <h4 class="mesma-linha">{{estabelecimento.nome}}</h4>
+                <p class="quebra-sem-espaco">{{estabelecimento.endereco}} , {{estabelecimento.numero}}. {{estabelecimento.bairro}}</p>
+                <p class="quebra-sem-espaco">Telefone: {{estabelecimento.telefone_1}}</p>
+            </div>
+        </div>
+        <div id="divReserva" class="row">
+            <br>
+            <h4 class="border-top"></h4>
+
+            <div id="divData" class="col">
+                <ion-list>
+                    <label class="item item-input">
+                        <span class="input-label">Data:</span>
+                        <input type="date" ng-model="rev.dataReserva">
+                    </label>
+                </ion-list>
+            </div>
+            <div id="divHorario" class="col">
+                <label class="item item-input">
+                        <span class="input-label">Horário:</span>
+                        <input type="text" ng-model="rev.horario">
+                    </label>
+            </div>
+        </div>
+        <!--Combo de serviços oferecidos-->
+        <div id="divServicos col">
+            <label class="item item-input item-select" data-ng-init="consultaServicos();consultaPagamentos();consultaEsp()">
+            <div class="input-label">
+             Serviços:
+            </div>
+            <select ng-model="rev.servico" >
+                <option value="" disabled>Selecione</option>
+                <option ng-repeat="reserva in vm.estReserva" value = "{{reserva.id_servico}} ">{{reserva.tipo_servico}} </option>
+                
+            </select>
+            </label>
+            <!--Combo formas de pagamento-->
+            <label class="item item-input item-select">
+            <div class="input-label">
+             Forma de Pagamento:
+            </div>
+            <select ng-model="rev.formaPagamento" ng-change="pegaFormaPagamento(formaPagamento)">
+                <option value="" disabled>Selecione</option>
+                <option  ng-repeat="pagamento in vm.estPagamento" value = "{{pagamento.id_tipo_pagamento}} ">{{pagamento.desc_tipo_pagamento}}</option>
+            </select>
+            </label>
+        </div>
+        <br>
+        <!--Botões-->
+        <div id="divBtns" class="row has-footer">
+            <div id="btnConfirma" class="row col-50">
+                <button class="button button-block button-balanced icon icon-left ion-checkmark-circled" ng-click="confirmaReserva()">Confirmar</button>
+            </div>
+            <br>
+            <div id="btnConfirma" class="row col-50">
+                <button class="button button-block button-assertive icon icon-left ion-android-cancel" ng-click="cancelar()">Cancelar</button>
+            </div>
+        </div>
+
+
+
+
+
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,4 @@
+Definir CSS padrão para fundo
+Tela para contato e informação de versão do APP
+Definir logotipo
+Definir cabeçalho e tipo para título das páginas

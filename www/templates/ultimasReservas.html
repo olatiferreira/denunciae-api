@@ -1,0 +1,40 @@
+<ion-view>
+    <ion-pane>
+        <!--Filtros da tela-->
+        <br>
+        <br>
+
+        <div id="divFiltros" class="row" data-ng-init="consulta()">
+            <div class="col col-50">
+                <ion-list>
+                    <label class="item item-input">
+                        <span class="input-label">Data:</span>
+                        <input type="date" ng-model="dataReserva">
+                    </label>
+                </ion-list>
+            </div>
+            <div class="col col-50">
+                <ion-list>
+                    <label class="item item-input">
+                        <span class="input-label">Data:</span>
+                        <input type="date" ng-model="dataReserva">
+                    </label>
+                </ion-list>
+            </div>
+        </div>
+        <div id="divPesquisa">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" placeholder="Pesquisar" ng-model="search">
+                </label>
+            </div>
+        </div>
+        <br>
+        <div>
+            <ion-item ng-repeat="reserva in vm.reservas | filter: search" class="item-button-right">
+                <p>{{reserva.nome}} R$:{{reserva.valor}} {{reserva.tipo_servico}}</p>
+            </ion-item>
+        </div>
+    </ion-pane>
+</ion-view>

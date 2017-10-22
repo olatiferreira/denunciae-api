@@ -1,0 +1,53 @@
+<ion-view>
+    <ion-content>
+        <div class="bar bar-header">
+            <a ng-click="goHome()" class="button icon-left ion-chevron-left button-clear button-dark"></a>
+            <div class="h1 title">Criar Conta</div>
+        </div>
+        <br>
+        <div class="row row-center">
+            <div id="divAvatar" class="col col-center text-center">
+                <a class="item item-thumbnail-center semBorda">
+                    <!--<a class="icon-center icon ion-camera icone-maior">-->
+                    <!--<p class="legenda">Tirar Foto</p>-->
+                    <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+                    <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">
+                    <br>
+                    <button ng-click="takePicture()" class="button button-clear button-stable">Tirar Foto</button>
+                </a>
+            </div>
+        </div>
+        <div id="divFormularioCadastro">
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                        <span class="input-label">Nome Completo</span>
+                        <input type="text" autofocus>
+                    </label>
+                <label class="item item-input item-stacked-label">
+                        <span class="input-label">Data Nascimento</span>
+                        <input type="date" placeholder="">
+                    </label>
+                <label class="item item-input item-stacked-label">
+                        <span class="input-label">Digite Seu CPF</span>
+                        <input type="text" placeholder="">
+                    </label>
+                <label class="item item-input item-stacked-label">
+                        <span class="input-label">Telefone</span>
+                        <input type="tel" placeholder="(99)99999-9999">
+                    </label>
+                <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <input type="email" placeholder="john@suhr.com">
+                </label>
+                <label class="item item-input item-stacked-label">
+                        <span class="input-label">Senha</span>
+                        <input type="password" placeholder="">
+                         <p class="legenda">Mínimo 4 dígitos</p>
+                </label>
+            </div>
+            <button ng-click="goLogin()" class="button  button-block button-positive">Confirmar</button>
+
+
+        </div>
+    </ion-content>
+</ion-view>

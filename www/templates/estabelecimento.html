@@ -1,0 +1,37 @@
+<ion-view>
+    <ion-content>
+        <div id="divImgEstabelecimento" class="item semBorda" data-ng-init="consultaEsp()">
+            <img class="full-image semBorda" src="img\foto-full.jpg">
+            
+        </div>
+        <div id="divDetalhesEstabelecimento" class="row">
+            <!--<div id="divAvatar" class="row col-25 row-left">-->
+            <div class="item item-thumbnail-left item-icon-right row col-25 row-left semBorda">
+                  <img src="\img\tony-logo.png" class="imagem-redonda">
+            </div>
+            <div class="row col row-center text-center" ng-repeat="estabelecimento in vm.estabelecimentosEsp">
+                <h4 class="mesma-linha">{{estabelecimento.nome}}</h4>
+                <p class="quebra-sem-espaco">{{estabelecimento.endereco}}  , {{estabelecimento.numero}}. {{estabelecimento.bairro}}</p>
+                <p class="quebra-sem-espaco">Telefone: {{estabelecimento.telefone_1}}</p>
+            </div>
+        </div>
+        <div id="divHorarios" class="item">
+            <h4 class="text-center">Horário de Atendimento </h4>
+            <p class="text-center">Segunda a Sexta das 8h às 18hrs</p>
+            <p class="text-center">Sábado das 9h as 13hrs</p>
+        </div>
+         <!--<h6 class="text-center">Pagamentos </h6>
+        <div id="divFormasPagamentos" class="row">
+            <div class="col">
+                   <i class="icon ion-cash icone-medio"></i>
+                    <i class="icon ion-card icone-medio"></i>
+            </div>
+        </div>-->
+        <br>
+        <br>
+        <div class="row col">
+            <button class="button button-positive button-block icon ion-bookmark" data-ng-click="goReserva()">  Reservar</button>
+        </div>
+
+    </ion-content>
+</ion-view>
